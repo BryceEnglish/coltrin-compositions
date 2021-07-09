@@ -1,25 +1,50 @@
-import logo from './logo.svg';
+import { useMediaQuery } from "react-responsive"
 import './App.css';
+import SplashScreen from "./components/SplashScreen";
+import SocialTray from "./components/SocialTray";
+import Footer from "./components/footer";
+
+const useDesktopMediaQuery = () =>
+  useMediaQuery({ query: "(min-width: 1280px)" })
+
+const useTabletAndBelowMediaQuery = () =>
+  useMediaQuery({ query: "(max-width: 1279px)" })
+
+const Desktop = ({ children }) => {
+  const isDesktop = useDesktopMediaQuery()
+
+  return isDesktop ? children : null
+}
+
+const TabletAndBelow = ({ children }) => {
+  const isTabletAndBelow = useTabletAndBelowMediaQuery()
+
+  return isTabletAndBelow ? children : null
+}
 
 function App() {
+
+  const handleMediaQueryChange = (matches) => {
+    // matches will be true or false based on the value for the media query
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SocialTray />
+      <div className="App-content">
+        {/* Desktop Start */}
+        <Desktop>
+          <SplashScreen />
+        </Desktop>
+        {/* Desktop End */}
+        {/* Mobile/Tablet Start */}
+        <TabletAndBelow>
+        </TabletAndBelow>
+        {/* Mobile/Tablet End */}
+      </div>
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
