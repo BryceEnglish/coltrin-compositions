@@ -2,7 +2,9 @@ import { useMediaQuery } from "react-responsive"
 import './App.css';
 import SplashScreen from "./components/SplashScreen";
 import SocialTray from "./components/SocialTray";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
+import Intro from "./components/Intro";
+import MusicPlayer from "./components/MusicPlayer";
 
 const useDesktopMediaQuery = () =>
   useMediaQuery({ query: "(min-width: 1280px)" })
@@ -35,6 +37,8 @@ function App() {
         {/* Desktop Start */}
         <Desktop>
           <SplashScreen />
+          <Intro />
+          <MusicPlayer />
         </Desktop>
         {/* Desktop End */}
         {/* Mobile/Tablet Start */}

@@ -35,8 +35,23 @@ body {
 }
 
 .socialTray__icon {
-  color: var(--red-neutral-400);
+  color: var(--black-neutral-900);
   padding-top: 10px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .splashScreen-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .splashScreen {
@@ -60,17 +75,134 @@ body {
   margin: 0px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .splashScreen-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro {
+  display: block;
+  width: 800px;
+  height: 800px;
+  margin: 150px auto;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.intro__content-header {
+  color: var(--black-neutral-900);
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 20px;
+}
+
+.intro__content {
+  display: flex;
+  color: var(--black-neutral-900);
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 300;
+  margin: 20px;
+  width: fit-content;
+}
+
+.intro__button {
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--clr-neutral-100);
+  text-shadow: 0px 0px 10px black;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 10px;
+  border: 3px solid var(--red-neutral-400);
+}
+
+.intro__button:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(
+    to right,
+    var(--clr-neutral-100) 0%,
+    var(--red-neutral-400) 51%,
+    var(--clr-neutral-100) 100%
+  );
+}
+
+.musicPlayer {
+  height: 150px;
+  width: fit-content;
+  color: var(--black-neutral-900);
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  border: 2px solid var(--black-neutral-900);
+}
+
+.musicPlayer__Header {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.musicPlayer__content {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.musicPlayer__Timer {
+  padding-left: 0px;
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.musicPlayer__List {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px;
+  margin: 30px 20px 0px 0px;
+  margin-bottom: 0px;
+}
+
+.musicPlayer__List-item {
+  padding: 5px;
+}
+
+.musicPlayer__Buttons {
+  padding-left: 0px;
+}
+
+.musicPlayer__Buttons-Play {
+  background-color: lightgreen;
+}
+
+.musicPlayer__Buttons-Pause {
+  background-color: lightblue;
+}
+
+.musicPlayer__Buttons-Stop {
+  background-color: lightcoral;
+}
+
+.rotator img {
+  width: 100px;
+  height: 100px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+}
+
+.rotator img:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
 }
