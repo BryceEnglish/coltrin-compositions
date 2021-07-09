@@ -5,6 +5,7 @@ import SocialTray from "./components/SocialTray";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
 import MusicPlayer from "./components/MusicPlayer";
+import ContactUs from "./components/ContactUs";
 
 const useDesktopMediaQuery = () =>
   useMediaQuery({ query: "(min-width: 1280px)" })

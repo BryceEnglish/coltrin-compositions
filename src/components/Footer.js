@@ -1,17 +1,10 @@
 import React from "react";
+import ContactUs from "./ContactUs";
 
 const Footer = () => {
   return (
     <div className="Footer">
-      <p className="Footer__text"></p>
-      <a
-        className="contact-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        @coltrincompositions.com
-      </a>
+      <ContactUs />
     </div>
   );
 };

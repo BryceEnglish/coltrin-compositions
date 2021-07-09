@@ -134,7 +134,7 @@ body {
   height: 150px;
   width: fit-content;
   color: var(--black-neutral-900);
-  margin: 0px auto;
+  margin: 60px auto;
   display: flex;
   flex-direction: row;
   align-content: flex-start;
